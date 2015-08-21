@@ -1,7 +1,7 @@
 {
   "name": "oloo-shim",
   "version": "0.0.1",
-  "description": "This is a really simple shim for working with oloo but in more understandble way. It provides access to the parent object, this way you can name methods the same if you like and this grants more readability of the code.",
+  "description": "This is a really simple shim for working with OLOO (Objects Linked to Other Objects) a Kyle Simpson's JS pattern for handling objects relations by delagating behaviors between objects. I've just created this shim because i think it helps dealing with some problems about the JS language it self, not the pattern. This package provides access to the parent object something that is not nativly available and this way you can name methods the same if you like to and it also grants more readability of the code. For a complete explanation of OLOO pattern you should really go here. This is a very usefull pattern and i really advise you to take a look and also try this shim, because is this way i like to work and maybe you will too.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
