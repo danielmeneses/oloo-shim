@@ -1,0 +1,15 @@
+{
+  "name": "oloo-shim",
+  "version": "0.0.1",
+  "description": "This is a really simple shim for working with oloo but in more understandble way. It provides access to the parent object, this way you can name methods the same if you like and this grants more readability of the code.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oloo",
+    "pattern"
+  ],
+  "author": "Daniel Meneses",
+  "license": "MIT"
+}
