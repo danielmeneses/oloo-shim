@@ -3,7 +3,7 @@ This is a really simple shim for working with OLOO (Objects Linked to Other Obje
 <br>I've just created this shim because i think it helps dealing with some problems about the JS language it self, not the pattern. This package provides access to the parent object something that is not nativly available and this way you can name methods the same if you like to and it also grants more readability of the code.
 <br><br> For a complete explanation of OLOO pattern you should really go <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch6.md#delegation-theory">here</a>.<br>This is a very usefull pattern and i really advise you to take a look and also try this shim, because is this way i like to work and maybe you will too.
 
-<h2>Intall</h2>
+<h2>Install</h2>
 <pre>npm install oloo-shim --save</pre>
 <h2>Complete example</h2>
 <pre>
