@@ -1,5 +1,14 @@
 module.exports = {
     install: function(){
+        
+        // polyfill for Object.create in case browser doesn't support the method
+        if(!Object.create){
+            Object.prototype.create = function(obj){
+                function F() {}
+                F.prototype = obj;
+                return new F();
+            }
+        }
         // oloo pattern - tinny shim
         Object.prototype.oloo = function(o1, o2){
             if( o1 && typeof o1 === "object" ){
