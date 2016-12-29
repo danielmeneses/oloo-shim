@@ -3,10 +3,15 @@ module.exports = {
         
         // polyfill for Object.create in case browser doesn't support the method
         if(!Object.create){
-            Object.prototype.create = function(obj){
+            Object.prototype.create = function(obj, descriptor){
                 function F() {}
                 F.prototype = obj;
-                return new F();
+                var newObj = new F();
+                // add obj descriptor if browser supports it and it's passed as arg
+                if( Object.defineProperties && descriptor ){
+                    Object.defineProperties(newObj, descriptor);
+                }
+                return newObj;
             }
         }
         // oloo pattern - tinny shim
