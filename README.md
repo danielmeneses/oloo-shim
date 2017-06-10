@@ -6,7 +6,7 @@ This is a really simple shim for working with OLOO (Objects Linked to Other Obje
 <h2>Install</h2>
 <pre>npm install oloo-shim --save</pre>
 <h2>Complete example</h2>
-<pre>
+```
 require("oloo-shim").install();
 
 var o1 = {
@@ -39,5 +39,4 @@ var o3 = Object.oloo(o2, {
 var o4 = Object.oloo(o3);
 o4.init("Daniel", "Meneses");
 console.log( o4.getFullname() );
-
-</pre>
+```
