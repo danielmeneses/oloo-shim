@@ -6,7 +6,8 @@ This is a really simple shim for working with OLOO (Objects Linked to Other Obje
 <h2>Install</h2>
 <pre>npm install oloo-shim --save</pre>
 <h2>Complete example</h2>
-```
+
+```javascript
 require("oloo-shim").install();
 
 var o1 = {
