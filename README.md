@@ -44,7 +44,7 @@ console.log( o4.getFullname() );
 
 You can actually chain any number of objects:</h2> (thanks to @semkaraman)
 ```javascript
-var o2 = Object.oloo({
+var o = Object.oloo({
     firstname: null,
     init: function(firstname){
         this.setFirstname(firstname);
