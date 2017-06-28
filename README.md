@@ -76,3 +76,4 @@ var o2 = Object.oloo({
     }
 });
 ```
+
