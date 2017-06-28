@@ -15,26 +15,30 @@ module.exports = {
             }
         }
         // oloo pattern - tinny shim
-        Object.prototype.oloo = function(o1, o2){
-            if( o1 && typeof o1 === "object" ){
-                // create new object
-                var o0 = Object.create(o1);
-
-                // copy props to the created object
-                if( o2 && typeof o2 === "object" ){
-                    // copy all props to the brand new obj
-                    for( var key in o2 ){
-                        if(o2.hasOwnProperty(key)){
-                            o0[key] = o2[key];
-                        }
+        Object.prototype.oloo = function() {
+            if(!arguments) return null;
+            var objArgs = arguments,
+                a = arguments[0];
+            var o = Object.create(a);
+            if(1 < arguments.length){
+                var n = arguments[1];
+                for(var key in n){
+                    if(n.hasOwnProperty(key)){
+                        o[key] = n[key];
                     }
                 }
-                // set parent reference
-                o0.parent = o1;
-                return o0;
             }
-
-            return null;
+            o.parent = a;
+            var args = Object.keys(objArgs).map(function(e) {
+                return objArgs[e];
+            });
+            args.splice(0,2);
+            if (args.length === 0){
+                return o;
+            }
+            args.unshift(o);
+            o = arguments.callee.apply(this, args);
+            return o;
         }
     },
     uninstall: function(){
