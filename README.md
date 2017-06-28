@@ -42,7 +42,7 @@ o4.init("Daniel", "Meneses");
 console.log( o4.getFullname() );
 ```
 
-<h2>You can actually chain any number of objects:</h2> (thanks to @semkaraman)
+<h2>You can actually chain any number of objects:</h2> (thanks to @semkaraman)</h2>
 ```javascript
 var o2 = Object.oloo({
     firstname: null,
