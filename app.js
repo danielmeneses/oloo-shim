@@ -37,7 +37,7 @@ module.exports = {
                 return o;
             }
             args.unshift(o);
-            o = Object.oloo.apply(this, args);
+            o = arguments.callee.apply(this, args);
             return o;
         }
     },
