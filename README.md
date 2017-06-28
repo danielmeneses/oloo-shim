@@ -41,3 +41,38 @@ var o4 = Object.oloo(o3);
 o4.init("Daniel", "Meneses");
 console.log( o4.getFullname() );
 ```
+
+<h2>You can actually chain any number of objects:</h2> (thanks to @semkaraman)
+```javascript
+var o2 = Object.oloo({
+    firstname: null,
+    init: function(firstname){
+        this.setFirstname(firstname);
+    },
+    setFirstname: function(name){
+        this.firstname = name;
+    }
+}, {
+    lastname: null,
+    init: function(firstname, lastname){
+        this.parent.init(firstname); // access parent function with same name
+        this.lastname = lastname;
+    },
+    setLastname: function(name){
+        this.lastname = name;
+    }
+}, {
+    lastname: null,
+    init: function(firstname, lastname){
+        this.parent.init(firstname); // access parent function with same name
+        this.lastname = lastname;
+    },
+    setLastname: function(name){
+        this.lastname = name;
+    }
+}, {
+    getFullname: function(){
+        return this.firstname+" "+this.lastname;
+    }
+});
+```
