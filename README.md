@@ -62,15 +62,6 @@ var o = Object.oloo({
         this.lastname = name;
     }
 }, {
-    lastname: null,
-    init: function(firstname, lastname){
-        this.parent.init(firstname); // access parent function with same name
-        this.lastname = lastname;
-    },
-    setLastname: function(name){
-        this.lastname = name;
-    }
-}, {
     getFullname: function(){
         return this.firstname+" "+this.lastname;
     }
